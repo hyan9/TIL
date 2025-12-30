@@ -1,0 +1,43 @@
+## Morning TODO
+
+1. github.com -> New Repo (Repo name: second - repo ( README.md MIT LICENSE))
+2. 내 컴퓨터에 clone(~/Documents/dev/)
+3. touch .gitignore -> Setting(내 환경에 맞춰서, python, vim, OS from https://gitignore.io)
+4. README.md -> 기본구조
+5. touch main.py -> print('hello')
+
+## How to use pre-commit
+
+1. $ pip install pre-commit
+2. $ pre-commit --v 로 pre-commit 명령어 인식유무 확인
+3. $ pre-commit sample-config > .pre-commit-config.yaml
+4. $ pre-commit install 하여 commit 시 자동실행하기 (강제실행은 $ pre-commit run)
+5. $ 작업 -> add, commit -> pre-commit 동작 및 자동수정 -> 수정사항 add, commit -> 완료
+
+https://pre-commit.com/hooks.html 추가 방법
+
+-   repo: https://github.com/psf/black
+    rev: stable
+    hooks:
+    - id: black
+      language_version: python3.14.2
+-   repo: https://github.com/PyCQA/flake8
+    rev: 7.0.0
+    hooks:
+    - id: flake8
+
+## Mini DIY
+
+1. New branch fizzbuzz
+2. Switch to branch fizzbuzz
+3. 15의 배수일 때, fizzbuzz를 출력하는 코드 추가
+
+for i in range(1, 15+1):
+  if i % 15 == 0:
+    print('fizzbuzz')
+
+4. add, commit
+5. Switch to branch main
+6. Merge branch 'fizzbuzz'
+7. Delete branch 'fizzbuzz'
+
